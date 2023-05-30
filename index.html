@@ -8,32 +8,85 @@
 
 
 
-  <!-- Titulo -->
-  <h1>Titulo Del Sitio Wed</h1>
+  <!-- Titulo -->"
+  <h1 id="encabezado" class="titulo titulogrande">Oa </h1>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background: #dddddd38;
+      display: inline-block;
+      margin-right: 10px;
+      border: 1px solid #000;
+    }
 
+    .azul {
+      background: blue;
+      border: 1px solid #000;
+    }
+
+    .rojo {
+      background: #ff4136;
+      border: 1px solid #000;
+    }
+
+    .titulo {
+      border: 2px solid rgb(59, 161, 39);
+      background: #838685;
+      padding: 10px;
+    }
+
+    .titulogrande {
+      font-size: 60px;
+    }
+
+
+    .thumb {
+      width: 200px;
+      transition: 0.15s all ease;
+    }
+
+    .grande {
+      width: 400px;
+    }
+  </style>
 </head>
 
-
 <body>
-  <!-- Parrafos -->
+  <section id="contenedor">
+    <div class=""> </div>
+    <div class=""></div>
+  </section> <br>
 
-  <p id="primero">Este es el parrafo 1 del sitio wed con <b> java script </b> </p> <br>
+  <form action="">
+    <input type="button" value="Cambio De Tamaño" onclick="Zoom ();">
+  </form> <br>
 
-  <p id="segundo">Este es el parrafo 2 del sitio wed con <b>Java script </b></p> <br>
+  <img id="thumb" class="thumb " src="https://i.pinimg.com/280x280_RS/b8/86/e3/b886e3ee475d087de07f1429dd251ff3.jpg"
+    width="400" alt="">
 
-  <p id="tercero">Este es el parrafo 3 del sitio wed con <b>Java script </b></p> <br>
+  <script>
+    var elemento = document.createElement("div");
+    elemento.setAttribute("class", "azul");
+    var padre = document.getElementById("contenedor");
+    var referencia = document.getElementsByTagName("div")[2];
+    padre.insertBefore(elemento, referencia);
 
+    var emcabezado = document.getElementById("encabezado");
+    encabezado.style.background = "razul";
+    encabezado.style.color = "#bbb";
 
+    var Zoom = function name() {
+      var thumb = document.getElementById("thumb");
+      if (thumb.className == "thumb") {
+        thumb.className = "thumb grande";
+      }
+      else {
+        thumb.className = "thumb";
+      }
+    }
+
+  </script>
 </body>
 
-<script>
-
-  var elementosp = document.getElementsByTagName(p);
-
-
-  
-
-
-</script>
-
-
+</html>
