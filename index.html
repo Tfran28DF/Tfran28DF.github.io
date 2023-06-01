@@ -4,6 +4,7 @@
 <html>
 
 <head>
+  <h6>Video17</h6>
   <title>Java Script</title>
 
 
@@ -20,15 +21,20 @@
       border: 1px solid #000;
     }
 
+
+
     .azul {
       background: blue;
       border: 1px solid #000;
     }
 
+
+
     .rojo {
       background: #ff4136;
       border: 1px solid #000;
     }
+
 
     .titulo {
       border: 2px solid rgb(59, 161, 39);
@@ -36,9 +42,11 @@
       padding: 10px;
     }
 
+
     .titulogrande {
       font-size: 60px;
     }
+
 
 
     .thumb {
@@ -46,11 +54,14 @@
       transition: 0.15s all ease;
     }
 
+
     .grande {
       width: 400px;
     }
   </style>
 </head>
+
+<h6>video18</h6>
 
 <body>
   <section id="contenedor">
@@ -58,12 +69,30 @@
     <div class=""></div>
   </section> <br>
 
+  <h6>video19</h6>
   <form action="">
     <input type="button" value="Cambio De Tamaño" onclick="Zoom ();">
   </form> <br>
 
   <img id="thumb" class="thumb " src="https://i.pinimg.com/280x280_RS/b8/86/e3/b886e3ee475d087de07f1429dd251ff3.jpg"
     width="400" alt="">
+
+  <h6>Video20</h6>
+  <button id="Boton">Boton</button>
+  <input type="text" id="imput">
+
+  <h6> Video21</h6>
+
+  <form action="" name="formulario2" method="get">
+    <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre">
+    <br>
+    <input type="radio" name="sexo" id="hombre" value="Hombre">Hombre
+    <input type="radio" name="sexo" id="mujer" value="Mujer">Mujer
+    <br>
+    <input type="checkbox" name="terminos" id="terminos">Terminos y Condiciones
+    <br>
+    <input type="submit" id="btn" name="btn" value="Enviar">
+  </form>
 
   <script>
     var elemento = document.createElement("div");
@@ -76,16 +105,51 @@
     encabezado.style.background = "razul";
     encabezado.style.color = "#bbb";
 
-    var Zoom = function name() {
+    var zoom = function name() {
       var thumb = document.getElementById("thumb");
       if (thumb.className == "thumb") {
         thumb.className = "thumb grande";
       }
       else {
         thumb.className = "thumb";
-      }
-    }
+      };
+    };
 
+    (
+      function () {
+        var formulario2 = document.getElementsByName('formulario2')[0];
+        elementos = formulario2.elements;
+        boton = document.getElementById('btn');
+
+        var validarnombre = function (e) {
+          if (formulario2.nombre.value == 0) {
+            alert("Completa El Campo Nombre");
+            e.preventDefault()
+          }
+        };
+        var validaRadio = function (e) {
+          if (formulario2.sexo[0].checked == true || formulario2.sexo[1].checked == true) {
+
+          } else {
+            alert("Comppleta Uno De Los Dos Generos");
+            e.preventDefault();
+          }
+        };
+        var validarCheckBox = function () {
+          if (formulario2.terminos.checked == false) {
+            alert("Comppleta Los Terminos Y Condiciones");
+            e.preventDefault();
+          }
+        }
+
+        var validar = function name(e) {
+          validarnombre(e);
+          validaRadio(e);
+          validarCheckBox(e);
+        };
+        formulario2.addEventListener("submit", validar)
+      }()
+    )
   </script>
 </body>
 
