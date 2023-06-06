@@ -1,92 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
-
 <head>
-  <title>Java Script</title>
-
-
-
-  <!-- Titulo -->"
-  <h1 id="encabezado" class="titulo titulogrande">Oa </h1>
-  <style>
-    div {
-      width: 200px;
-      height: 200px;
-      background: #dddddd38;
-      display: inline-block;
-      margin-right: 10px;
-      border: 1px solid #000;
-    }
-
-    .azul {
-      background: blue;
-      border: 1px solid #000;
-    }
-
-    .rojo {
-      background: #ff4136;
-      border: 1px solid #000;
-    }
-
-    .titulo {
-      border: 2px solid rgb(59, 161, 39);
-      background: #838685;
-      padding: 10px;
-    }
-
-    .titulogrande {
-      font-size: 60px;
-    }
-
-
-    .thumb {
-      width: 200px;
-      transition: 0.15s all ease;
-    }
-
-    .grande {
-      width: 400px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, imital-scale=1,0, maximum-scale=1.0, maximum-scale=1.0">
+  <title>Reloj 12 Horas</title>
+  <link rel="stylesheet" href="Estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
-  <section id="contenedor">
-    <div class=""> </div>
-    <div class=""></div>
-  </section> <br>
+  <div class="wrap">
+    <div class="widget">
+      <div class="fecha">
+        <p id="diaSemana" class="diaSemana"></p>
+        <p id="dia" class="dia"></p>
+        <p>de</p>
+        <p id="mes" class="mes"></p>
+        <p>del</p>
+        <p id="year" class="year"></p>
+      </div>
 
-  <form action="">
-    <input type="button" value="Cambio De Tamaño" onclick="Zoom ();">
-  </form> <br>
-
-  <img id="thumb" class="thumb " src="https://i.pinimg.com/280x280_RS/b8/86/e3/b886e3ee475d087de07f1429dd251ff3.jpg"
-    width="400" alt="">
-
-  <script>
-    var elemento = document.createElement("div");
-    elemento.setAttribute("class", "azul");
-    var padre = document.getElementById("contenedor");
-    var referencia = document.getElementsByTagName("div")[2];
-    padre.insertBefore(elemento, referencia);
-
-    var emcabezado = document.getElementById("encabezado");
-    encabezado.style.background = "razul";
-    encabezado.style.color = "#bbb";
-
-    var Zoom = function name() {
-      var thumb = document.getElementById("thumb");
-      if (thumb.className == "thumb") {
-        thumb.className = "thumb grande";
-      }
-      else {
-        thumb.className = "thumb";
-      }
-    }
-
-  </script>
+      <div class="reloj">
+        <p id="horas" class="horas"></p>
+        <p>:</p>
+        <p id="minutos" class="minutos"></p>
+        <p>:</p>
+        <div class="caja-segundos">
+          <p id="ampm" class="ampm"></p>
+          <p id="segundos" class="segundos"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Reloj.js"></script>
 </body>
 
 </html>
