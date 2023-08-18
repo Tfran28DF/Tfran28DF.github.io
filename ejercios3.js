@@ -1,19 +1,11 @@
-// Solicitar al usuario ingresar los kilómetros recorridos
-var kilometrosRecorridos = parseFloat(
-  prompt("Por favor, ingresa la cantidad de kilómetros recorridos:")
-);
+* {
+  padding: 0;
+  margin: 0;
+}
 
-// Solicitar al usuario ingresar los litros de combustible consumidos
-var litrosCombustible = parseFloat(
-  prompt("Por favor, ingresa la cantidad de litros de combustible consumidos:")
-);
-
-// Calcular el consumo de combustible por kilómetro
-var consumoPorKilometro = litrosCombustible / kilometrosRecorridos;
-
-// Mostrar el resultado en pantalla
-alert(
-  "El consumo de combustible por kilómetro es: " +
-    consumoPorKilometro.toFixed(2)
-);
-document.write("Tú consumo fue de; " + consumoPorKilometro);
+h1 {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: bisque;
+}
